@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chic Bracelet — Catálogo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero" id="hero">
+    <div class="hero__content">
+      <h1 class="logo">Chic Bracelet</h1>
+      <p class="tagline">Tu esencia, tu energía, tu Chic Bracelet</p>
+      <button class="btn btn--primary" id="enterBtn">Entrar al catálogo</button>
+    </div>
+  </header>
+
+  <main id="catalogo" class="hidden">
+    <nav class="tabs">
+      <button class="tab active" data-tab="blue">Blue Charm</button>
+      <button class="tab" data-tab="green">Green Spirit</button>
+      <button class="tab" data-tab="yellow">Yellow Joy</button>
+      <button class="tab" data-tab="red">Passion Flame</button>
+    </nav>
+
+    <section class="panel active" id="panel-blue">
+      <header class="panel__head">
+        <h2>Blue Charm</h2>
+        <p>Inspirada en calma y protección. Tonos azules que evocan paz, confianza y estilo.</p>
+      </header>
+      <div class="grid" id="grid-blue"></div>
+      <button class="btn ver-mas" data-more="blue">Ver más</button>
+    </section>
+
+    <section class="panel" id="panel-green">
+      <header class="panel__head">
+        <h2>Green Spirit</h2>
+        <p>El verde simboliza equilibrio y prosperidad. Conexión con la naturaleza y energía positiva.</p>
+      </header>
+      <div class="grid" id="grid-green"></div>
+      <button class="btn ver-mas" data-more="green">Ver más</button>
+    </section>
+
+    <section class="panel" id="panel-yellow">
+      <header class="panel__head">
+        <h2>Yellow Joy</h2>
+        <p>Tonos dorados y amarillos que transmiten luz, optimismo y alegría.</p>
+      </header>
+      <div class="grid" id="grid-yellow"></div>
+      <button class="btn ver-mas" data-more="yellow">Ver más</button>
+    </section>
+
+    <section class="panel" id="panel-red">
+      <header class="panel__head">
+        <h2>Passion Flame</h2>
+        <p>Rojo vibrante que representa amor, pasión y fuerza interior.</p>
+      </header>
+      <div class="grid" id="grid-red"></div>
+      <button class="btn ver-mas" data-more="red">Ver más</button>
+    </section>
+
+    <section class="contacto">
+      <h3>Contáctanos</h3>
+      <p>WhatsApp: <a href="https://wa.me/51966145072" target="_blank" rel="noopener">966145072</a></p>
+      <p>Instagram: <a href="https://instagram.com/chic.braacelets18" target="_blank" rel="noopener">@chic.braacelets18</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Chic Bracelet · Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
