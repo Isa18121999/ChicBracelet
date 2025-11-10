@@ -80,13 +80,34 @@ function setActiveTab(key){
   $$('.panel').forEach(p => p.classList.toggle('active', p.id === `panel-${key}`));
   renderGrid(key);
 }
+// ✅ Esta función muestra el catálogo y oculta la portada
 function showCatalog() {
-  const hero = document.getElementById('hero');
-  const catalog = document.getElementById('catalogo');
-  hero.classList.add('hidden');
-  catalog.classList.remove('hidden');
-  setActiveTab('blue');
+  const hero = document.getElementById('hero');        // sección de bienvenida
+  const catalog = document.getElementById('catalogo'); // sección del catálogo
+  if (hero && catalog) {
+    hero.classList.add('hidden');     // oculta la portada
+    catalog.classList.remove('hidden'); // muestra el catálogo
+  }
+  setActiveTab('blue'); // muestra por defecto la colección Blue Charm
+  window.scrollTo({ top: 0, behavior: 'smooth' }); // sube suavemente al inicio
 }
+
+// ✅ Esta parte se ejecuta cuando la página carga
+window.addEventListener('DOMContentLoaded', () => {
+  // Si alguien entra directamente con el enlace #catalogo, abre el catálogo
+  if (location.hash === '#catalogo') {
+    showCatalog();
+  }
+
+  // 🔸 Cuando haces clic en el botón, llama a showCatalog()
+  const enter = document.getElementById('enterBtn');
+  if (enter) {
+    enter.addEventListener('click', () => {
+      showCatalog(); // activa el cambio de vista
+    });
+  }
+});
+
 
 // ---- Init ----
 window.addEventListener('DOMContentLoaded', () => {
