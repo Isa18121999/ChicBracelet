@@ -80,6 +80,13 @@ function setActiveTab(key){
   $$('.panel').forEach(p => p.classList.toggle('active', p.id === `panel-${key}`));
   renderGrid(key);
 }
+function showCatalog() {
+  const hero = document.getElementById('hero');
+  const catalog = document.getElementById('catalogo');
+  hero.classList.add('hidden');
+  catalog.classList.remove('hidden');
+  setActiveTab('blue');
+}
 
 // ---- Init ----
 window.addEventListener('DOMContentLoaded', () => {
